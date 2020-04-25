@@ -4,22 +4,27 @@
 <head>
   <meta charset="UTF-8">
   <title>Money Count</title>
-  <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
   <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+  <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 
 <body style='background-color: #656565;'>
   <div style='height: 0.8em;'></div>
   <div style='text-align: center; width: 100%;'>
     <div id="inputContainer">
-      <span style="color: cornsilk;">enter hourly rate</span>
-      <br />
-      <input id="hourlyRate" type="number" />
-      <br />
-      <span style="color: cornsilk;">enter motivational text</span>
-      <input id="motivationalText" type="text" />
-      <br />
-      <button id="start">Start!</button>
+        <div class="group">      
+          <input id="hourlyRate" type="number" required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>enter hourly rate</label>
+        </div>
+        <div class="group">      
+          <input id="motivationalText" type="text" required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>enter motivational text</label>
+        </div>
+        <button class="btn third" id="start">Start!</button>
     </div>
     <div id="countContainer" style="display: none;">
       <span id="count" style='color: #85FF3F; font-size: 4em;'>0</span>
@@ -40,8 +45,6 @@
   };
 
   window.onload = function () {
-    document.getElementById('hourlyRate').focus();
-
     document.getElementById('start').onclick = function startItUp() {
       document.getElementById('inputContainer').style.display = 'none';
       document.getElementById('countContainer').style.display = 'block';

@@ -1,0 +1,40 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\dncab\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add electron-builder --dev
+
+PATH: 
+  C:\Users\dncab\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\cmd;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files\Git\cmd;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Users\dncab\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk-12.0.2\bin;C:\Go\bin;C:\Program Files\OpenSSL-Win64\bin;C:\Program Files\Amazon\AWSCLI\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\dncab\AppData\Local\Microsoft\WindowsApps;C:\Users\dncab\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\dncab\AppData\Local\hyper\app-3.0.2\resources\bin;C:\Users\dncab\AppData\Local\GitHubDesktop\bin;C:\Users\dncab\AppData\Roaming\npm;C:\Users\dncab\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files (x86)\Nmap;C:\Users\dncab\go\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.22.0
+
+Node version: 
+  10.16.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: UNKNOWN: unknown error, copyfile 'C:\Users\dncab\AppData\Local\Yarn\Cache\v6\npm-app-builder-bin-3.5.6-61debd4531f60b07bd20296e7e0297b4a1f5f3b9-integrity\node_modules\app-builder-bin\win\ia32\app-builder.exe' -> 'C:\Users\dncab\Dev\Personal\money-count\node_modules\app-builder-bin\win\ia32\app-builder.exe'
+
+npm manifest: 
+  {
+    "name": "money-count",
+    "version": "1.0.0",
+    "description": "",
+    "main": "main.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "electron ."
+    },
+    "author": "David Cabal",
+    "license": "ISC",
+    "devDependencies": {
+      "electron": "^8.2.3"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
