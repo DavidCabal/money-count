@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Money Count</title>
+  <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+</head>
+
+<body style='background-color: #656565;'>
+  <div style='height: 0.8em;'></div>
+  <div style='text-align: center; width: 100%;'>
+    <div id="inputContainer">
+      <span style="color: cornsilk;">enter hourly rate</span>
+      <br />
+      <input id="hourlyRate" type="number" />
+      <br />
+      <span style="color: cornsilk;">enter motivational text</span>
+      <input id="motivationalText" type="text" />
+      <br />
+      <button id="start">Start!</button>
+    </div>
+    <div id="countContainer" style="display: none;">
+      <span id="count" style='color: #85FF3F; font-size: 4em;'>0</span>
+      <br />
+      <span id="motivation" style='color: cornsilk;'></span>
+    </div>
+  </div>
+</body>
+
+<script>
+  var count = document.getElementById('count');
+  function increment(currentCount, hourlyRate) {
+    setTimeout(function () {
+      var newCount = (1 * currentCount) + hourlyRate;
+      count.innerHTML = newCount;
+      increment(newCount, hourlyRate);
+    }, 60000);
+  };
+
+  window.onload = function () {
+    document.getElementById('hourlyRate').focus();
+
+    document.getElementById('start').onclick = function startItUp() {
+      document.getElementById('inputContainer').style.display = 'none';
+      document.getElementById('countContainer').style.display = 'block';
+      var hourlyRate = document.getElementById('hourlyRate').value;
+      var motivationalText = document.getElementById('motivationalText').value;
+      document.getElementById('motivation').textContent = motivationalText;
+      hourlyRate = hourlyRate / 60;
+      hourlyRate = Math.round(hourlyRate * 100) / 100;
+      increment(0, hourlyRate);
+    };
+  };
+</script>
+
+</html>
