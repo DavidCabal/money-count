@@ -11,6 +11,3 @@ Check releases to download the latest release for your platform. If a release ha
 2. ```yarn install```
 3. ```yarn dist```
 4. Check the dist folder for your packaged up and ready to go app
-
----
-I developed this app to keep me motivated while working on after hours contract jobs.
